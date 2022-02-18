@@ -1,2 +1,2 @@
 # Anmol_Score
- Lab4
+ This project is created to complete Lab4 and demonstrate use of layouts and widgets.
