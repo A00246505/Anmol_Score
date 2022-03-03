@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Anmol_Score">
         <activity
-            android:name=".MainActivity"
+            android:name="com.anmol_a00246505.anmol_score.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
