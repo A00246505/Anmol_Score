@@ -2,6 +2,7 @@ package com.anmol_a00246505.anmol_score;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +13,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView plutoScoreText, jupiterScoreText;
+    TextView plutoScoreText, jupiterScoreText, selectedTeamText;
     Switch teamSelector;
     RadioGroup scores;
     Button increaseButton, decreaseButton;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         //==============
         plutoScoreText = findViewById(R.id.plutoScoreText);
         jupiterScoreText = findViewById(R.id.jupiterScoreText);
+        selectedTeamText = findViewById(R.id.selectedTeam);
         teamSelector = findViewById(R.id.teamSelector);
         scores = findViewById(R.id.scores);
         increaseButton = findViewById(R.id.increaseScoreButton);
@@ -50,8 +52,12 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     selectedTeam = teamJupiter;
+                    selectedTeamText.setText("Jupiter");
+                    selectedTeamText.setTextColor(Color.parseColor("#ED1212"));
                 } else {
                     selectedTeam = teamPluto;
+                    selectedTeamText.setText("Pluto");
+                    selectedTeamText.setTextColor(Color.parseColor("#03A9F4"));
                 }
             }
         });
